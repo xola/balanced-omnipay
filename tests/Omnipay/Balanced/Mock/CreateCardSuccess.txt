@@ -1,0 +1,42 @@
+HTTP/1.1 201 CREATED
+access-control-allow-headers: Content-Type
+access-control-allow-methods: POST, OPTIONS
+access-control-allow-origin: *
+Content-Type: application/json
+Date: Mon, 18 Nov 2013 18:23:23 GMT
+location: http://api-s.balancedpayments.com/v1/marketplaces/TEST-MP2iMXeIZzMeFdWStVamS2wM/cards/CC3XOt46biSOKWr84xaDOkOz
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM821500dc507e11e3b62e02a1fe52a36c
+x-balanced-host: balanced-api-06
+x-balanced-marketplace: TEST-MP2iMXeIZzMeFdWStVamS2wM
+x-balanced-merchant: TEST-MR2ix8FcNEYlH08NPOFuapQ3
+x-balanced-version: 62e6c8feedb017483c3ebb658692e7f780e31792
+X-Midlr-Version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSVhQAQhhQEAMCFlVAFEIIFBQCHVEJWANYAVtXAARTU1MPAAJQTUIFCQ9KRBMGUAFXUlIBWg5UD10DV1dQG00RB1IOF1Nq
+Content-Length: 671
+Connection: keep-alive
+
+{
+  "security_code_check": "passed",
+  "_type": "card",
+  "hash": "fc4ccd5de54f42a5e75f76fbfde60948440c7a382ee7d21b2bc509ab9cfed788",
+  "last_four": "5100",
+  "_uris": {},
+  "brand": "MasterCard",
+  "expiration_month": 12,
+  "meta": {},
+  "postal_code": null,
+  "country_code": null,
+  "id": "CC3XOt46biSOKWr84xaDOkOz",
+  "customer": null,
+  "account": null,
+  "postal_code_check": "unknown",
+  "name": null,
+  "expiration_year": 2020,
+  "created_at": "2013-11-18T18:23:23.301567Z",
+  "uri": "/v1/marketplaces/TEST-MP2iMXeIZzMeFdWStVamS2wM/cards/CC3XOt46biSOKWr84xaDOkOz",
+  "card_type": "mastercard",
+  "is_valid": true,
+  "is_verified": true,
+  "street_address": null
+}
