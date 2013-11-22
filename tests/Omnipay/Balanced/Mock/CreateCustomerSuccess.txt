@@ -1,0 +1,77 @@
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 11:01:04 GMT
+location: http://api-s.balancedpayments.com/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM613bbd3a536511e3bff502a1fe52a36c
+x-balanced-host: balanced-api-02
+x-balanced-marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+x-balanced-merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+x-balanced-version: 83801c4c60fdb93095d945db35e89fd46265d633
+X-Midlr-Version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSQhUQXltWEBVNAUIHWRZdGhgSA0kZUR9VBVdQBAdYUFILCwBUUVYOHRdWSBEUV1dfBVYAUgBVCAwFVwZcXEMdQVUDCEVSPA==
+Content-Length: 1606
+Connection: keep-alive
+
+{
+  "_type": "customer",
+  "twitter": null,
+  "reversals_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/reversals",
+  "phone": null,
+  "meta": {},
+  "facebook": null,
+  "address": {},
+  "business_name": null,
+  "bank_accounts_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/bank_accounts",
+  "id": "CU2XyScd3YhAqUfXYbGXAtlS",
+  "credits_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/credits",
+  "cards_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/cards",
+  "holds_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/holds",
+  "name": null,
+  "refunds_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/refunds",
+  "dob": null,
+  "created_at": "2013-11-22T11:01:04.012251Z",
+  "destination": null,
+  "is_identity_verified": false,
+  "uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS",
+  "source": null,
+  "_uris": {
+    "transactions_uri": {
+      "_type": "page",
+      "key": "transactions"
+    },
+    "bank_accounts_uri": {
+      "_type": "page",
+      "key": "bank_accounts"
+    },
+    "refunds_uri": {
+      "_type": "page",
+      "key": "refunds"
+    },
+    "debits_uri": {
+      "_type": "page",
+      "key": "debits"
+    },
+    "holds_uri": {
+      "_type": "page",
+      "key": "holds"
+    },
+    "reversals_uri": {
+      "_type": "page",
+      "key": "reversals"
+    },
+    "credits_uri": {
+      "_type": "page",
+      "key": "credits"
+    },
+    "cards_uri": {
+      "_type": "page",
+      "key": "cards"
+    }
+  },
+  "debits_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/debits",
+  "transactions_uri": "/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS/transactions",
+  "ssn_last4": null,
+  "email": null,
+  "ein": null
+}

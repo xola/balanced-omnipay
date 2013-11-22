@@ -1,0 +1,169 @@
+HTTP/1.1 201 CREATED
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 14:57:59 GMT
+Location: http://api.balancedpayments.com/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/debits/WD3FRO9hEXMmlQQwtjlzarDh
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM78ee28c0538611e3904d026ba7d31e6f
+X-Balanced-Host: balanced-api-06
+X-Balanced-Marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+X-Balanced-Merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+X-Balanced-Version: 83801c4c60fdb93095d945db35e89fd46265d633
+Content-Length: 4753
+Connection: keep-alive
+
+{
+  "status": "succeeded",
+  "_type": "debit",
+  "description": "Debit 10.23 dollars on customers card for merchant",
+  "events_uri": "/v1/debits/WD3FRO9hEXMmlQQwtjlzarDh/events",
+  "_uris": {
+    "refunds_uri": {
+      "_type": "page",
+      "key": "refunds"
+    },
+    "events_uri": {
+      "_type": "page",
+      "key": "events"
+    }
+  },
+  "hold": {
+    "customer_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU",
+    "_type": "hold",
+    "fee": null,
+    "description": "Debit 10.23 dollars on customers card for merchant",
+    "_uris": {
+      "debit_uri": {
+        "_type": "debit",
+        "key": "debit"
+      },
+      "source_uri": {
+        "_type": "card",
+        "key": "source"
+      },
+      "customer_uri": {
+        "_type": "customer",
+        "key": "customer"
+      },
+      "events_uri": {
+        "_type": "page",
+        "key": "events"
+      }
+    },
+    "debit_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/debits/HL3FQrnzb06Op7NqHDmUljEr",
+    "created_at": "2013-11-22T14:57:56.774534Z",
+    "is_void": false,
+    "expires_at": "2013-11-29T14:57:57.264013Z",
+    "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/holds/HL3FQrnzb06Op7NqHDmUljEr",
+    "transaction_number": "HL880-003-7657",
+    "amount": 1023,
+    "meta": {},
+    "events_uri": "/v1/holds/HL3FQrnzb06Op7NqHDmUljEr/events",
+    "source_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/cards/CC3D9myl48gjwocNVssBf7ES",
+    "id": "HL3FQrnzb06Op7NqHDmUljEr"
+  },
+  "id": "WD3FRO9hEXMmlQQwtjlzarDh",
+  "customer": {
+    "twitter": null,
+    "meta": {},
+    "id": "CU3DJN2ZXR4592yuUzf9mPeU",
+    "destination": null,
+    "email": "testcustomer@test.com",
+    "_type": "customer",
+    "source_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/cards/CC3D9myl48gjwocNVssBf7ES",
+    "reversals_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/reversals",
+    "phone": null,
+    "_uris": {
+      "holds_uri": {
+        "_type": "page",
+        "key": "holds"
+      },
+      "source_uri": {
+        "_type": "card",
+        "key": "source"
+      },
+      "bank_accounts_uri": {
+        "_type": "page",
+        "key": "bank_accounts"
+      },
+      "refunds_uri": {
+        "_type": "page",
+        "key": "refunds"
+      },
+      "debits_uri": {
+        "_type": "page",
+        "key": "debits"
+      },
+      "transactions_uri": {
+        "_type": "page",
+        "key": "transactions"
+      },
+      "reversals_uri": {
+        "_type": "page",
+        "key": "reversals"
+      },
+      "credits_uri": {
+        "_type": "page",
+        "key": "credits"
+      },
+      "cards_uri": {
+        "_type": "page",
+        "key": "cards"
+      }
+    },
+    "facebook": null,
+    "address": {},
+    "business_name": null,
+    "bank_accounts_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/bank_accounts",
+    "credits_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/credits",
+    "cards_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/cards",
+    "holds_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/holds",
+    "name": "Test Customer",
+    "dob": null,
+    "created_at": "2013-11-22T14:57:54.912532Z",
+    "is_identity_verified": false,
+    "uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU",
+    "refunds_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/refunds",
+    "debits_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/debits",
+    "transactions_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/transactions",
+    "ssn_last4": null,
+    "ein": null
+  },
+  "on_behalf_of": null,
+  "fee": null,
+  "refunds_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/debits/WD3FRO9hEXMmlQQwtjlzarDh/refunds",
+  "amount": 1023,
+  "created_at": "2013-11-22T14:57:56.799086Z",
+  "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/debits/WD3FRO9hEXMmlQQwtjlzarDh",
+  "source": {
+    "security_code_check": "passed",
+    "expiration_month": 4,
+    "_type": "card",
+    "postal_code_check": "passed",
+    "hash": "896a472df92252a1439759e8328663a1acb076ab0d1b7b8508cddcf357d6723d",
+    "last_four": "5100",
+    "expiration_year": 2015,
+    "_uris": {
+      "customer_uri": {
+        "_type": "customer",
+        "key": "customer"
+      }
+    },
+    "brand": "MasterCard",
+    "uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU/cards/CC3D9myl48gjwocNVssBf7ES",
+    "customer_uri": "/v1/customers/CU3DJN2ZXR4592yuUzf9mPeU",
+    "id": "CC3D9myl48gjwocNVssBf7ES",
+    "card_type": "mastercard",
+    "is_valid": true,
+    "meta": {},
+    "country_code": "USA",
+    "postal_code": "12345",
+    "is_verified": true,
+    "created_at": "2013-11-22T14:57:54.395971Z",
+    "street_address": "123 Billing St Billsville",
+    "name": "Example User"
+  },
+  "transaction_number": "W652-691-8592",
+  "meta": {},
+  "appears_on_statement_as": "Merchant Name",
+  "available_at": "2013-11-22T14:57:58.457652Z"
+}

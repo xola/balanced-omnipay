@@ -22,7 +22,8 @@
         "psr-0": { "Omnipay\\Balanced\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "~2.0"
+        "omnipay/common": "~2.0",
+        "monolog/monolog": "dev-master"
     },
     "require-dev": {
         "omnipay/tests": "~2.0"

@@ -1,0 +1,159 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 14:21:47 GMT
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM6b856234538111e39ed4026ba7cd33d0
+X-Balanced-Host: balanced-api-02
+X-Balanced-Marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+X-Balanced-Merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+X-Balanced-Version: 83801c4c60fdb93095d945db35e89fd46265d633
+Content-Length: 4663
+Connection: keep-alive
+
+{
+  "security_code_check": "passed",
+  "_type": "card",
+  "hash": "f3456aee14bdebcb948accf76961797e74bc0c4c065f1495cbc4f76525b44bbe",
+  "last_four": "5100",
+  "_uris": {},
+  "brand": "MasterCard",
+  "expiration_month": 12,
+  "meta": {},
+  "postal_code": "12345",
+  "country_code": "USA",
+  "id": "CC5ZboW6WNIAtYj3RH42Oo0",
+  "customer": {
+    "twitter": null,
+    "meta": {},
+    "id": "CU5PIWAaIM2UBvRBfVpdMjzq",
+    "destination": null,
+    "email": null,
+    "_type": "customer",
+    "source_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/cards/CC5ZboW6WNIAtYj3RH42Oo0",
+    "reversals_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/reversals",
+    "phone": null,
+    "_uris": {
+      "holds_uri": {
+        "_type": "page",
+        "key": "holds"
+      },
+      "source_uri": {
+        "_type": "card",
+        "key": "source"
+      },
+      "bank_accounts_uri": {
+        "_type": "page",
+        "key": "bank_accounts"
+      },
+      "refunds_uri": {
+        "_type": "page",
+        "key": "refunds"
+      },
+      "debits_uri": {
+        "_type": "page",
+        "key": "debits"
+      },
+      "transactions_uri": {
+        "_type": "page",
+        "key": "transactions"
+      },
+      "reversals_uri": {
+        "_type": "page",
+        "key": "reversals"
+      },
+      "credits_uri": {
+        "_type": "page",
+        "key": "credits"
+      },
+      "cards_uri": {
+        "_type": "page",
+        "key": "cards"
+      }
+    },
+    "facebook": null,
+    "address": {},
+    "business_name": null,
+    "bank_accounts_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/bank_accounts",
+    "credits_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/credits",
+    "cards_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/cards",
+    "holds_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/holds",
+    "name": null,
+    "dob": null,
+    "created_at": "2013-11-22T14:09:49.335167Z",
+    "is_identity_verified": false,
+    "uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq",
+    "refunds_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/refunds",
+    "debits_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/debits",
+    "transactions_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq/transactions",
+    "ssn_last4": null,
+    "ein": null
+  },
+  "account": {
+    "customer_uri": "/v1/customers/CU5PIWAaIM2UBvRBfVpdMjzq",
+    "_type": "account",
+    "_uris": {
+      "transactions_uri": {
+        "_type": "page",
+        "key": "transactions"
+      },
+      "bank_accounts_uri": {
+        "_type": "page",
+        "key": "bank_accounts"
+      },
+      "refunds_uri": {
+        "_type": "page",
+        "key": "refunds"
+      },
+      "customer_uri": {
+        "_type": "customer",
+        "key": "customer"
+      },
+      "debits_uri": {
+        "_type": "page",
+        "key": "debits"
+      },
+      "holds_uri": {
+        "_type": "page",
+        "key": "holds"
+      },
+      "reversals_uri": {
+        "_type": "page",
+        "key": "reversals"
+      },
+      "credits_uri": {
+        "_type": "page",
+        "key": "credits"
+      },
+      "cards_uri": {
+        "_type": "page",
+        "key": "cards"
+      }
+    },
+    "transactions_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/transactions",
+    "name": null,
+    "roles": [
+      "buyer"
+    ],
+    "created_at": "2013-11-22T14:09:49.335167Z",
+    "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq",
+    "reversals_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/reversals",
+    "refunds_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/refunds",
+    "meta": {},
+    "debits_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/debits",
+    "holds_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/holds",
+    "bank_accounts_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/bank_accounts",
+    "email_address": null,
+    "id": "CU5PIWAaIM2UBvRBfVpdMjzq",
+    "credits_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/credits",
+    "cards_uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/cards"
+  },
+  "postal_code_check": "passed",
+  "name": "Example User",
+  "expiration_year": 2016,
+  "created_at": "2013-11-22T11:55:42.117978Z",
+  "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/accounts/CU5PIWAaIM2UBvRBfVpdMjzq/cards/CC5ZboW6WNIAtYj3RH42Oo0",
+  "card_type": "mastercard",
+  "is_valid": true,
+  "is_verified": true,
+  "street_address": "123 Billing St Billsville"
+}

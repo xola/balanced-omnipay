@@ -1,30 +1,17 @@
-HTTP/1.1 400 BAD REQUEST
-access-control-allow-headers: Content-Type
-access-control-allow-methods: POST, OPTIONS
-access-control-allow-origin: *
-Content-Type: application/json
-Date: Mon, 18 Nov 2013 18:26:14 GMT
-Server: ngx_openresty/1.2.6.3
-X-Balanced-Guru: OHMe81237a6507e11e3852602a1fe52a36c
-x-balanced-host: balanced-api-02
-x-balanced-marketplace: TEST-MP2iMXeIZzMeFdWStVamS2wM
-x-balanced-merchant: TEST-MR2ix8FcNEYlH08NPOFuapQ3
-x-balanced-version: 62e6c8feedb017483c3ebb658692e7f780e31792
-X-Midlr-Version: 2
-x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSVhQAQhhQEAMCFlVAFEIIFBQCHVQJUANSBlNRBwVYVlsBAAVRTUIFCQ9KRBMCBVAFAFcEAAFTAF4BBVZdG00RB1IOF1Nq
-Content-Length: 407
+HTTP/1.1 402 Payment Required
+Server: nginx
+Date: Tue, 26 Feb 2013 16:17:02 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 139
 Connection: keep-alive
+Access-Control-Max-Age: 300
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache, no-store
 
 {
-  "status": "Bad Request",
-  "category_code": "request",
-  "additional": null,
-  "status_code": 400,
-  "extras": {
-    "expiration_year": "\"2012\" must be >= 2013"
-  },
-  "category_type": "request",
-  "_uris": {},
-  "request_id": "OHMe81237a6507e11e3852602a1fe52a36c",
-  "description": "Invalid field [expiration_year] - \"2012\" must be >= 2013 Your request id is OHMe81237a6507e11e3852602a1fe52a36c."
+  "error": {
+    "message": "You must provide an integer value for 'exp_year'.",
+    "type": "card_error",
+    "param": "exp_year"
+  }
 }

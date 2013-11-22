@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 12:12:57 GMT
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHM6c795b4e536f11e38320026ba7c1aba6
+X-Balanced-Host: balanced-api-04
+X-Balanced-Marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+X-Balanced-Merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+X-Balanced-Version: 83801c4c60fdb93095d945db35e89fd46265d633
+Content-Length: 705
+Connection: keep-alive
+
+{
+  "security_code_check": "passed",
+  "_type": "card",
+  "hash": "f3456aee14bdebcb948accf76961797e74bc0c4c065f1495cbc4f76525b44bbe",
+  "last_four": "5100",
+  "_uris": {},
+  "brand": "MasterCard",
+  "expiration_month": 12,
+  "meta": {},
+  "postal_code": "12345",
+  "country_code": "USA",
+  "id": "CC5ZboW6WNIAtYj3RH42Oo0",
+  "customer": null,
+  "account": null,
+  "postal_code_check": "passed",
+  "name": "Example User",
+  "expiration_year": 2016,
+  "created_at": "2013-11-22T11:55:42.117978Z",
+  "uri": "/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/cards/CC5ZboW6WNIAtYj3RH42Oo0",
+  "card_type": "mastercard",
+  "is_valid": true,
+  "is_verified": true,
+  "street_address": "123 Billing St Billsville"
+}

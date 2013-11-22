@@ -1,0 +1,22 @@
+HTTP/1.1 401 UNAUTHORIZED
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 11:09:57 GMT
+Server: ngx_openresty/1.2.6.3
+www-authenticate: Basic realm="<p>The server could not verify that you are authorized to access the URL requested.  You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.</p><p>In case you are allowed to request the document, please check your user-id and password and try again.</p>"
+X-Balanced-Guru: OHM9f2c766a536611e3a0c602a1fe53e539
+x-balanced-host: balanced-api-01
+x-balanced-version: 83801c4c60fdb93095d945db35e89fd46265d633
+X-Midlr-Version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxY0QwgcFFUZVBQVF1deVRYSQBsRB0pEARgDUFZQVglSClcPCgIBAl0KVx1BA05EFAFVVFFeClVQUFcBVQ9TU1IUH0IAAg5DB2U=
+Content-Length: 615
+Connection: keep-alive
+
+{
+  "status": "Unauthorized",
+  "category_code": "authentication-required",
+  "category_type": "permission",
+  "_uris": {},
+  "description": "<p>The server could not verify that you are authorized to access the URL requested.  You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.</p><p>In case you are allowed to request the document, please check your user-id and password and try again.</p> Your request id is OHM9f2c766a536611e3a0c602a1fe53e539.",
+  "request_id": "OHM9f2c766a536611e3a0c602a1fe53e539",
+  "status_code": 401
+}

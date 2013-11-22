@@ -1,0 +1,27 @@
+HTTP/1.1 409 CONFLICT
+Content-Type: application/json
+Date: Fri, 22 Nov 2013 11:40:21 GMT
+Server: ngx_openresty/1.2.6.3
+X-Balanced-Guru: OHMde4d88f8536a11e3bff502a1fe52a36c
+x-balanced-host: balanced-api-02
+x-balanced-marketplace: TEST-MP1TCNbswn3s3I2UxnZyM7Pq
+x-balanced-merchant: TEST-MR1T23ZcyLbxCfFRDrCAzOSy
+x-balanced-version: 83801c4c60fdb93095d945db35e89fd46265d633
+X-Midlr-Version: 2
+x-newrelic-app-data: PxQFWFNXCQYTVVhWAwQDVUYdFhE1AwE2QgNWEVlbQFtcCxYxSBVbDQoZVA4IF0pcXAgEEBhSQhUQXltWEBVNF0AGWRZdGhgSA0kZUR9QB1JSAwVZX1cBBANTVFYPCRtGVgQaE0BfBwEGUwFbWl1VB1VVC1JQQx9CAldbEgM+
+Content-Length: 409
+Connection: keep-alive
+
+{
+  "status": "Conflict",
+  "category_code": "uri-not-understood",
+  "additional": null,
+  "status_code": 409,
+  "description": "The field [card_uri] was not a Balanced URI - \"invalid-card-uri\". Your request id is OHMde4d88f8536a11e3bff502a1fe52a36c.",
+  "category_type": "logical",
+  "_uris": {},
+  "request_id": "OHMde4d88f8536a11e3bff502a1fe52a36c",
+  "extras": {
+    "card_uri": "invalid-card-uri"
+  }
+}
