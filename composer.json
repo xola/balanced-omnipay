@@ -16,6 +16,10 @@
         {
             "name": "Anush Ramani",
             "email": "anush@xola.com"
+        },
+        {
+            "name": "Venkata Kotra Krishna",
+            "email":"venkat@xola.com"
         }
     ],
     "autoload": {
