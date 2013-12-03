@@ -63,10 +63,10 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
         // Log http requests for debugging purpose
         // todo: remove before final push
-        //        $logger = new \Monolog\Logger('my_logger');
-        //        $logger->pushHandler(new \Monolog\Handler\StreamHandler('/var/log/php/debug.log', \Monolog\Logger::DEBUG));
-        //        $logger->pushHandler(new \Monolog\Handler\FirePHPHandler());
-        //        $logger->addInfo($httpRequest . "\n\n" . $httpResponse);
+        // $logger = new \Monolog\Logger('my_logger');
+        // $logger->pushHandler(new \Monolog\Handler\StreamHandler('/var/log/php/debug.log', \Monolog\Logger::DEBUG));
+        // $logger->pushHandler(new \Monolog\Handler\FirePHPHandler());
+        // $logger->addInfo($httpRequest . "\n\n" . $httpResponse);
 
         return $this->response = new Response($this, $httpResponse->json());
     }
