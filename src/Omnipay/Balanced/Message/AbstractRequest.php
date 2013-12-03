@@ -85,9 +85,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data['street_address'] = $this->getCard()->getAddress1() . ' ' . $this->getCard()->getAddress2();
         $data['city'] = $this->getCard()->getCity();
         $data['postal_code'] = $this->getCard()->getPostcode();
-//        $data['country_code'] = $this->getCard()->getParameter('country_code');
-//        $data['meta'] = $this->getCard()->getParameter('meta');
-//        $data['verify'] = $this->getCard()->getParameter('verify');
+        //        $data['country_code'] = $this->getCard()->getParameter('country_code');
+        //        $data['meta'] = $this->getCard()->getParameter('meta');
+        //        $data['verify'] = $this->getCard()->getParameter('verify');
 
         return $data;
     }
