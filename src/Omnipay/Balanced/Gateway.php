@@ -22,7 +22,7 @@ class Gateway extends AbstractGateway
     {
         return array(
             'apiKey' => '',
-            'marketPlace' => ''
+            'marketplace' => ''
         );
     }
 
@@ -36,14 +36,14 @@ class Gateway extends AbstractGateway
         return $this->setParameter('apiKey', $value);
     }
 
-    public function getMarketPlace()
+    public function getMarketplace()
     {
-        return $this->getParameter('marketPlace');
+        return $this->getParameter('marketplace');
     }
 
-    public function setMarketPlace($value)
+    public function setMarketplace($value)
     {
-        return $this->setParameter('marketPlace', $value);
+        return $this->setParameter('marketplace', $value);
 
     }
 
@@ -65,5 +65,10 @@ class Gateway extends AbstractGateway
     public function createCard(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\CreateCardRequest', $parameters);
+    }
+
+    public function fetchToken(array $parameters = array())
+    {
+        return $this->createRequest('\Omnipay\Balanced\Message\FetchTokenRequest', $parameters);
     }
 }

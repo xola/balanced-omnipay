@@ -11,7 +11,7 @@ class UpdateCustomerRequestTest extends TestCase
     public function setUp()
     {
         $this->request = new UpdateCustomerRequest($this->getHttpClient(), $this->getHttpRequest());
-        $this->request->setMarketPlace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
+        $this->request->setMarketplace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
         $this->request->setApiKey('ak-test-2DBryLFR3BBam1CipbWEGSO6gqVOBKghP');
         $this->request->setCustomer(array(
             'uri' => '/v1/customers/CU2XyScd3YhAqUfXYbGXAtlS'

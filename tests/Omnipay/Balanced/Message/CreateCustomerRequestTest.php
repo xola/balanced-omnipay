@@ -9,7 +9,7 @@ class CreateCustomerRequestTest extends TestCase
     public function setUp()
     {
         $this->request = new CreateCustomerRequest($this->getHttpClient(), $this->getHttpRequest());
-        $this->request->setMarketPlace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
+        $this->request->setMarketplace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
         $this->request->setApiKey('ak-test-2DBryLFR3BBam1CipbWEGSO6gqVOBKghP');
     }
 

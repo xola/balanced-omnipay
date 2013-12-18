@@ -20,15 +20,15 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('apiKey', $value);
     }
 
-    public function getMarketPlace()
+    public function getMarketplace()
     {
-        return $this->getParameter('marketPlace');
+        return $this->getParameter('marketplace');
 
     }
 
-    public function setMarketPlace($value)
+    public function setMarketplace($value)
     {
-        return $this->setParameter('marketPlace', $value);
+        return $this->setParameter('marketplace', $value);
     }
 
     abstract public function getEndpoint();

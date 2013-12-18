@@ -11,7 +11,7 @@ class FetchCardRequestTest extends TestCase
     {
         $this->request = new FetchCardRequest($this->getHttpClient(), $this->getHttpRequest());
         $this->request->setToken('/v1/marketplaces/TEST-MP1TCNbswn3s3I2UxnZyM7Pq/cards/CC5ZboW6WNIAtYj3RH42Oo0');
-        $this->request->setMarketPlace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
+        $this->request->setMarketplace('TEST-MP1TCNbswn3s3I2UxnZyM7Pq');
         $this->request->setApiKey('ak-test-2DBryLFR3BBam1CipbWEGSO6gqVOBKghP');
     }
 

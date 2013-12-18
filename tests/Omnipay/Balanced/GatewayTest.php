@@ -14,7 +14,7 @@ class GatewayTest extends GatewayTestCase
         parent::setUp();
 
         $this->gateway = new Gateway($this->getHttpClient(), $this->getHttpRequest());
-        $this->gateway->initialize(array('apiKey' => 'ak-test-2DBryLFR3BBam1CipbWEGSO6gqVOBKghP', 'marketPlace' => 'TEST-MP1TCNbswn3s3I2UxnZyM7Pq'));
+        $this->gateway->initialize(array('apiKey' => 'ak-test-2DBryLFR3BBam1CipbWEGSO6gqVOBKghP', 'marketplace' => 'TEST-MP1TCNbswn3s3I2UxnZyM7Pq'));
     }
 
     public function testPurchase()

@@ -20,7 +20,7 @@ class CreateCardRequest extends AbstractRequest
 
     public function getEndpoint()
     {
-        return $this->endpoint . '/marketplaces/' . $this->getParameter('marketPlace') . '/cards';
+        return $this->endpoint . '/marketplaces/' . $this->getParameter('marketplace') . '/cards';
     }
 
     /**
@@ -41,7 +41,7 @@ class CreateCardRequest extends AbstractRequest
             $request->initialize(array(
                 'token' => $this->getParameter('token'),
                 'apiKey' => $this->getApiKey(),
-                'marketPlace' => $this->getMarketPlace()
+                'marketplace' => $this->getMarketplace()
             ));
             $fetchCardResponse = $request->send();
         }
@@ -64,7 +64,7 @@ class CreateCardRequest extends AbstractRequest
             'name' => $this->getName(),
             'email' => $this->getEmail(),
             'apiKey' => $this->getApiKey(),
-            'marketPlace' => $this->getMarketPlace()
+            'marketplace' => $this->getMarketplace()
         ));
 
         $createCusResponse = $request->send();
@@ -83,7 +83,7 @@ class CreateCardRequest extends AbstractRequest
             'customer' => $cusData,
             'token' => $cardData['uri'],
             'apiKey' => $this->getApiKey(),
-            'marketPlace' => $this->getMarketPlace()
+            'marketplace' => $this->getMarketplace()
         ));
 
         $updateCusResponse = $request->send();
