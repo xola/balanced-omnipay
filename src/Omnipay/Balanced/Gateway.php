@@ -2,9 +2,12 @@
 
 namespace Omnipay\Balanced;
 
-use Omnipay\Common\AbstractGateway;
+use Omnipay\Balanced\Message\CreateCardRequest;
+use Omnipay\Balanced\Message\FetchTokenRequest;
+use Omnipay\Balanced\Message\FetchTransactionRequest;
 use Omnipay\Balanced\Message\PurchaseRequest;
 use Omnipay\Balanced\Message\RefundRequest;
+use Omnipay\Common\AbstractGateway;
 
 /**
  * Balanced Gateway
@@ -44,29 +47,48 @@ class Gateway extends AbstractGateway
     public function setMarketplace($value)
     {
         return $this->setParameter('marketplace', $value);
-
     }
 
+    /**
+     * @param array $parameters
+     * @return PurchaseRequest
+     */
     public function purchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\PurchaseRequest', $parameters);
     }
 
+    /**
+     * @param array $parameters
+     * @return RefundRequest
+     */
     public function refund(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\RefundRequest', $parameters);
     }
 
+    /**
+     * @param array $parameters
+     * @return FetchTransactionRequest
+     */
     public function fetchTransaction(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\FetchTransactionRequest', $parameters);
     }
 
+    /**
+     * @param array $parameters
+     * @return CreateCardRequest
+     */
     public function createCard(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\CreateCardRequest', $parameters);
     }
 
+    /**
+     * @param array $parameters
+     * @return FetchTokenRequest
+     */
     public function fetchToken(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\Balanced\Message\FetchTokenRequest', $parameters);

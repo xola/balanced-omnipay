@@ -3,11 +3,11 @@
 namespace Omnipay\Balanced;
 
 use Omnipay\Tests\GatewayTestCase;
-use Guzzle\Http\Message\RequestInterface;
-
 
 class GatewayTest extends GatewayTestCase
 {
+    /** @var Gateway */
+    protected $gateway;
 
     public function setUp()
     {
@@ -21,9 +21,9 @@ class GatewayTest extends GatewayTestCase
     {
         $params = array(
             'cardReference' => '{"card":"\/v1\/marketplaces\/TEST-MP1TCNbswn3s3I2UxnZyM7Pq\/cards\/CC3D9myl48gjwocNVssBf7ES","customer":"\/v1\/customers\/CU3DJN2ZXR4592yuUzf9mPeU"}',
-            'amount' => '10.23',
-            'statementDescriptor' => 'Merchant Name',
-            'description' => 'Debit 10.23 dollars on customers card for merchant'
+            'amount' => 10.23,
+            'statementDescriptor' => 'Space Parts Inc.',
+            'description' => '1 radion-accelerator core'
         );
         $request = $this->gateway->purchase($params);
 
@@ -42,45 +42,28 @@ class GatewayTest extends GatewayTestCase
         $this->assertEquals('Debit 10.23 dollars on customers card for merchant', $data['description']);
     }
 
-
-//    public function testRefund()
-//    {
-//        $request = $this->gateway->refund(array('amount' => '10.00'));
-//
-//        $this->assertInstanceOf('Omnipay\Balanced\Message\RefundRequest', $request);
-//        $this->assertSame('10.00', $request->getAmount());
-//    }
-//
-//    public function testFetchTransaction()
-//    {
-//        $request = $this->gateway->fetchTransaction(array());
-//
-//        $this->assertInstanceOf('Omnipay\Balanced\Message\FetchTransactionRequest', $request);
-//    }
-
     /**
-     * @integrationTest
+     * @group integration
      */
     public function testFullFlow()
     {
         // Create card
         $params = array(
             'card' => $this->getValidCard(),
-            'name' => 'Test Customer',
-            'email' => 'testcustomer@test.com',
+            'name' => 'Kaywinnet Lee Frye',
+            'email' => 'kaylee@serenity.com',
         );
         $request = $this->gateway->createCard($params);
 
         $this->assertInstanceOf('Omnipay\Balanced\Message\CreateCardRequest', $request);
         $response = $request->send();
-        $data = $response->getData();
 
         // Purchase using the card reference
         $request = $this->gateway->purchase(array(
             'cardReference' => $response->getCardReference(),
             'amount' => 10.23,
-            'statementDescriptor' => 'Merchant Name',
-            'description' => 'Debit 10.23 dollars on customers card for merchant'
+            'statementDescriptor' => 'Space Parts Inc.',
+            'description' => '1 radion-accelerator core'
         ));
         $response = $request->send();
 
@@ -88,8 +71,8 @@ class GatewayTest extends GatewayTestCase
         $this->assertNotNull($response->getTransactionReference());
         $data = $response->getData();
         $this->assertEquals(1023, $data['amount']);
-        $this->assertEquals('Merchant Name', $data['appears_on_statement_as']);
-        $this->assertEquals('Debit 10.23 dollars on customers card for merchant', $data['description']);
+        $this->assertEquals('Space Parts Inc.', $data['appears_on_statement_as']);
+        $this->assertEquals('1 radion-accelerator core', $data['description']);
 
         // Fetch details of debit transaction
         $debitRef = $response->getTransactionReference();
@@ -100,8 +83,8 @@ class GatewayTest extends GatewayTestCase
         $data = $response->getData();
         $this->assertTrue($response->isSuccessful());
         $this->assertEquals(1023, $data['amount']);
-        $this->assertEquals('Merchant Name', $data['appears_on_statement_as']);
-        $this->assertEquals('Debit 10.23 dollars on customers card for merchant', $data['description']);
+        $this->assertEquals('Space Parts Inc.', $data['appears_on_statement_as']);
+        $this->assertEquals('1 radion-accelerator core', $data['description']);
 
         // Refund the transaction using the transaction reference
         $request = $this->gateway->refund(array(
@@ -133,25 +116,7 @@ class GatewayTest extends GatewayTestCase
         $data = $response->getData();
         $this->assertTrue($response->isSuccessful());
         $this->assertEquals(1023, $data['amount']);
-        $this->assertEquals('Merchant Name', $data['appears_on_statement_as']);
-        $this->assertEquals('Debit 10.23 dollars on customers card for merchant', $data['description']);
-
+        $this->assertEquals('Space Parts Inc.', $data['appears_on_statement_as']);
+        $this->assertEquals('1 radion-accelerator core', $data['description']);
     }
-
-//
-//    public function testUpdateCard()
-//    {
-//        $request = $this->gateway->updateCard(array('cardReference' => 'cus_1MZSEtqSghKx99'));
-//
-//        $this->assertInstanceOf('Omnipay\Balanced\Message\UpdateCardRequest', $request);
-//        $this->assertSame('cus_1MZSEtqSghKx99', $request->getCardReference());
-//    }
-//
-//    public function testDeleteCard()
-//    {
-//        $request = $this->gateway->deleteCard(array('cardReference' => 'cus_1MZSEtqSghKx99'));
-//
-//        $this->assertInstanceOf('Omnipay\Balanced\Message\DeleteCardRequest', $request);
-//        $this->assertSame('cus_1MZSEtqSghKx99', $request->getCardReference());
-//    }
 }

@@ -61,13 +61,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             ->setHeader('Authorization', 'Basic ' . base64_encode($this->getApiKey() . ':'))
             ->send();
 
-        // Log http requests for debugging purpose
-        // todo: remove before final push
-        // $logger = new \Monolog\Logger('my_logger');
-        // $logger->pushHandler(new \Monolog\Handler\StreamHandler('/var/log/php/debug.log', \Monolog\Logger::DEBUG));
-        // $logger->pushHandler(new \Monolog\Handler\FirePHPHandler());
-        // $logger->addInfo($httpRequest . "\n\n" . $httpResponse);
-
         return $this->response = new Response($this, $httpResponse->json());
     }
 
@@ -85,9 +78,6 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $data['street_address'] = $this->getCard()->getAddress1() . ' ' . $this->getCard()->getAddress2();
         $data['city'] = $this->getCard()->getCity();
         $data['postal_code'] = $this->getCard()->getPostcode();
-        //        $data['country_code'] = $this->getCard()->getParameter('country_code');
-        //        $data['meta'] = $this->getCard()->getParameter('meta');
-        //        $data['verify'] = $this->getCard()->getParameter('verify');
 
         return $data;
     }
@@ -145,9 +135,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         }
     }
 
-    /**
-     * Need these below setters and getter for accessing this data withing createCardRequest.send
-     **/
+    // Need the below setters and getters for accessing this data within createCardRequest.send
+
     public function setEmail($value)
     {
         return $this->setParameter('email', $value);

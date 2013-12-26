@@ -10,7 +10,6 @@ class FetchTransactionRequest extends AbstractRequest
     public function getData()
     {
         $this->validate('transactionReference');
-
     }
 
     public function getEndpoint()

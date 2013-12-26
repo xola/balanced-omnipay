@@ -2,10 +2,6 @@
 
 namespace Omnipay\Balanced\Message;
 
-use Omnipay\Balanced\Message\FetchCardRequest;
-use Omnipay\Balanced\Message\CreateCustomerRequest;
-use Omnipay\Balanced\Message\UpdateCustomerRequest;
-
 /**
  * Balanced Create Credit Card Request.
  */
