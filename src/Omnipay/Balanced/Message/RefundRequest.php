@@ -12,18 +12,30 @@ class RefundRequest extends AbstractRequest
         $this->validate('transactionReference', 'amount');
 
         $data = array();
+        $data['debit_uri'] = $this->getDebitId();
         $data['amount'] = $this->getAmountInteger();
-
+        if ($this->getStatementDescriptor()) {
+            $data['appears_on_statement_as'] = $this->getStatementDescriptor();
+        }
         if ($this->getDescription()) {
             $data['description'] = $this->getDescription();
         }
 
-        $data['debit_uri'] = $this->getDebitId();
         return $data;
     }
 
     public function getEndpoint()
     {
         return $this->baseEndpoint . $this->getCustomerId() . '/refunds';
+    }
+
+    public function setStatementDescriptor($value)
+    {
+        return $this->setParameter('statementDescriptor', $value);
+    }
+
+    public function getStatementDescriptor()
+    {
+        return $this->getParameter('statementDescriptor');
     }
 }

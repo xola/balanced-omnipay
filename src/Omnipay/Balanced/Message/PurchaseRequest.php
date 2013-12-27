@@ -14,8 +14,10 @@ class PurchaseRequest extends AbstractRequest
         $data = array();
         $data['amount'] = $this->getAmountInteger();
         $data['description'] = $this->getDescription();
-        $data['appears_on_statement_as'] = $this->getStatementDescriptor();
         $data['source_uri'] = $this->getCardId();
+        if ($this->getStatementDescriptor()) {
+            $data['appears_on_statement_as'] = $this->getStatementDescriptor();
+        }
         if ($this->getMerchantId()) {
             $data['on_behalf_of_uri'] = $this->getMerchantId();
         }

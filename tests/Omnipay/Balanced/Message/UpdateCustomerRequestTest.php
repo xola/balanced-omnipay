@@ -6,7 +6,8 @@ use Omnipay\Tests\TestCase;
 
 class UpdateCustomerRequestTest extends TestCase
 {
-    public $request;
+    /** @var UpdateCustomerRequest */
+    protected $request;
 
     public function setUp()
     {

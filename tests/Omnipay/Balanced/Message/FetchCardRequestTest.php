@@ -7,6 +7,9 @@ use Omnipay\Tests\TestCase;
 
 class FetchCardRequestTest extends TestCase
 {
+    /** @var FetchCardRequest */
+    protected $request;
+
     public function setUp()
     {
         $this->request = new FetchCardRequest($this->getHttpClient(), $this->getHttpRequest());
