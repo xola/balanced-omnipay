@@ -66,22 +66,38 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     protected function getCardData()
     {
-        $this->getCard()->validate();
-
         $data = array();
-        $data['card_number'] = $this->getCard()->getNumber();
-        $data['expiration_month'] = $this->getCard()->getExpiryMonth();
-        $data['expiration_year'] = $this->getCard()->getExpiryYear();
-        $data['security_code'] = $this->getCard()->getCvv();
-        $data['name'] = $this->getCard()->getName();
-        $data['phone_number'] = $this->getCard()->getPhone();
-        $data['street_address'] = $this->getCard()->getAddress1() . ' ' . $this->getCard()->getAddress2();
-        $data['city'] = $this->getCard()->getCity();
-        $data['postal_code'] = $this->getCard()->getPostcode();
+        $card = $this->getCard();
+
+        $card->validate();
+
+        // Required fields
+        $data['card_number'] = $card->getNumber();
+        $data['expiration_month'] = $card->getExpiryMonth();
+        $data['expiration_year'] = $card->getExpiryYear();
+        $data['security_code'] = $card->getCvv();
+
+        // Optional fields. Balanced throws a validation error if empty fields are sent, so set them only if not empty.
+        $this->setData($data, 'name', $card->getName());
+        $this->setData($data, 'phone_number', $card->getPhone());
+        $this->setData($data, 'street_address', trim($card->getAddress1() . ' ' . $card->getAddress2()));
+        $this->setData($data, 'city', $card->getCity());
+        $this->setData($data, 'postal_code', $card->getPostcode());
 
         return $data;
     }
 
+    /**
+     * A helper function that sets a field into a data array only if the value is not empty.
+     *
+     * @param array $data
+     * @param string $key
+     * @param mixed $value
+     */
+    private function setData(&$data, $key, $value)
+    {
+        if (!empty($value)) $data[$key] = $value;
+    }
 
     /**
      * Helper getter to get card, customer and debit ids from the cardReference , transactionReference
